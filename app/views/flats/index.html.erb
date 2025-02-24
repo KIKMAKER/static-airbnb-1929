@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h1>Browse Flats</h1>
+  <div class="flats-container">
+    <% @flats.each do |flat| %>
+      <div class="card" style="width: 12rem;">
+        <img src=<%= flat["imageUrl"] %> class="card-img-top" alt="image of flat">
+        <div class="card-body">
+          <p class="card-title"><%= flat["name"] %></p>
+          <p class="card-text">EUR <%= flat["price"] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
